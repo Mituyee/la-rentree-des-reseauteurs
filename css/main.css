@@ -177,8 +177,8 @@ header figure {
 }
 
 header nav {
-  width: 60%;
-  font-size: 1em;
+  width: 100%;
+  font-size: 0.8em;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -192,7 +192,7 @@ header nav ul {
 }
 
 header nav ul li {
-  font-size: 1.125em;
+  font-size: 1em;
 }
 
 /* -----Footer Styles --------- */
@@ -243,7 +243,7 @@ footer .social-icons p i {
   font-family: "Font Awesome 5 Brands";
 }
 footer .social-icons p {
-  background-color: #527158;
+  background-color: #0a092c;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -272,7 +272,7 @@ input[type="button"] {
   width: 100%;
   padding: 20px 0;
   margin-top: 20px;
-  background-color: #0a092c;
+  background-color: 0a092c#;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 1.125em;
@@ -284,8 +284,32 @@ input[type="button"] {
 
 /* -------------------- Mobile Styles - Homepage -------------------- */
 
+/* ---------------------- Header --------------------------------- */
 
+@media only screen and (max-width: 666px) {
+  nav {
+    display: none;
+  }
+}
 
+/* ---------------------- Hero Area --------------------------------- */
+
+.hero-area {
+  background: url("../img/hero-image.jpg") center no-repeat #333;
+  background-size: cover;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* -------------------- Aside ---------------------------------------- */
 
 /* ==========================================================================
    Helper classes
@@ -375,15 +399,146 @@ input[type="button"] {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
+/* ==========================================================================
+Tablet Styles
+========================================================================== */
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+@media only screen and (min-width: 768px) {
+  /*Tablet styles here*/
+
+  /* ----General Style------*/
+
+  .content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;
+  }
+
+  /* -------------------- Base Header - Footer Styles -------------------- */
+
+  /* -----Header Styles --------- */
+
+  header {
+    padding: 33px 0;
+  }
+
+  header .content-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  header figure {
+    display: flex;
+    width: 50%;
+    padding-bottom: 40px;
+
+  }
+  .header-divider {
+    display: none;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+  }
+
+  /* -----Footer Styles --------- */
+
+  footer .content-wrapper {
+    width: 65%;
+  }
+  .footer-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .contact {
+    margin-bottom: 0;
+  }
+
+  footer .social-icons {
+    width: 12.5em;
+    justify-content: space-between;
+  }
+
+  footer .copyright {
+    width: 100%;
+  }
+
+  /* -------------------- Hero Area ---------------------------------------- */
+  .hero-area {
+    min-height: 500px;
+  }
+
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+  }
+
+  /* -------------------- Aside ---------------------------------------- */
+
+
+}
+  /* ==========================================================================
+  Desktop Style
+   ========================================================================== */
+
+@media only screen and (min-width: 1200px) {
+  /*Desktop styles here*/
+
+  /* ----General Style------*/
+  .content-wrapper {
+    max-width: 960px;
+  }
+
+  p {
+    font-size: 1.125em;
+    line-height: 1.333;
+  }
+
+  /* -----Header Styles --------- */
+
+  header {
+    padding: 15px 0;
+  }
+
+  /* ----------- Hero ----------- */
+
+  .hero-area {
+    min-height: 600px;
+  }
+  
+  .hero-area h1 {
+    font-size: 3.75em;
+    width: 80%;
+  }
+
+  /*----------- Aside ---------- */
+
+  h3,
+  h4 {
+    font-size: 1.875em;
+  }
+
+  .form-description p {
+    font-size: 1.125em;
+    line-height: 1.333;
+  }
+
+  aside .content-wrapper {
+    justify-content: space-around;
+  }
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 30%;
+  }
+
+  /*------------ Features --------- */
 }
 
 /* ==========================================================================
