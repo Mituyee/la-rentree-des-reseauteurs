@@ -675,6 +675,129 @@ margin: 10px;
   }
 
 
+
+
+
+/* ==========================================================================
+ Reseaux presents page
+   ========================================================================== */
+
+   .reseaux-presents {
+    background-color: #0a092c;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tabs-container,
+.tabs-container * {
+  box-sizing: border-box;
+}
+
+.tabs-container {
+  width: 100%;
+  height: 900px;
+  padding: 16px;
+  background: #fff;
+  color: #14213d;
+  box-shadow: 0 5px 50px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+
+.tabs-container .tab-heading-container {
+  display: flex;
+  background: #0a092c;
+  margin: -16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabs-container .tab-heading {
+  padding: 12px 30px;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 800;
+  gap: 4px;
+}
+
+.tabs-container .tab-heading.active {
+  background: #1d3557;
+}
+
+.tabs-container .tab-content {
+  display: none;
+  overflow-y: scroll;
+  height: 800px;
+  margin-top: 24px;
+}
+
+.tabs-container .tab-content.active {
+  display: block;
+}
+
+.tabs-container .tab-content h2 {
+  font-size: 40px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.tabs-container .tab-content .content {
+  display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.images{
+  width: 100%;
+  padding: 20px;
+ 
+}
+   
+
+
+.tabs-container .tab-content .content img {
+  width:30%;
+  border-radius: 50%;
+  padding: 30px;
+}
+
+@media (max-width: 900px) {
+  .tabs-container {
+    width: 80%;
+  }
+
+  .tabs-container .tab-heading-container {
+    justify-content: space-between;
+  }
+
+  .tabs-container .tab-heading {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .tabs-container {
+    width: 90%;
+  }
+
+  .tabs-container .tab-content h2 {
+    font-size: 30px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  .tabs-container .tab-heading {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
