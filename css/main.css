@@ -113,7 +113,7 @@ ol {
 }
 
 a {
-  color: #e2e3ed;
+  color: #b3d4fc;
   text-decoration: none;
 }
 
@@ -715,6 +715,7 @@ aside {
   height: 100%;
   border: 2px solid rgb(212, 209, 239);
   border-radius: 50%;
+  background: #fff;
 }
 
 .team-card-container {
@@ -885,6 +886,7 @@ aside {
   width: 100%;
   border-radius: 50%;
   padding: 10px;
+  background: #fff;
 }
 
 /* width */
@@ -1338,7 +1340,7 @@ Tablet Styles
   .tabs-container .tab-content .content img {
     font-size: 2em;
     margin: 0;
-    padding-top: 15px;
+    padding-top: 15px 0 0 0;
   }
 
   .images h4 {
