@@ -1,4 +1,6 @@
 
+// tabs
+
 const tabHeadingAll = document.querySelectorAll(".tabs-container .tab-heading");
 const tabContentAll = document.querySelectorAll(".tabs-container .tab-content");
 
@@ -19,12 +21,13 @@ tabHeadingAll.forEach((h, i) => {
     h.classList.add("active");
   });
 });
+// end of tabs 
 
 
+// slide show
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
-let thumbnails = document.querySelectorAll('.thumbnail .item');
 
 // config param
 let countItem = items.length;
@@ -52,13 +55,12 @@ let refreshInterval = setInterval(() => {
 function showSlider(){
     // remove item active old
     let itemActiveOld = document.querySelector('.slider .list .item.active');
-    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
     itemActiveOld.classList.remove('active');
-    thumbnailActiveOld.classList.remove('active');
+    
 
     // active new item
     items[itemActive].classList.add('active');
-    thumbnails[itemActive].classList.add('active');
+
 
     // clear auto time run slider
     clearInterval(refreshInterval);
@@ -67,10 +69,17 @@ function showSlider(){
     }, 5000)
 }
 
-// click thumbnail
-thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener('click', () => {
-        itemActive = index;
-        showSlider();
-    })
-})
+// end of slide show
+
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+// end of mobile navigation menu 

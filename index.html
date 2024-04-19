@@ -32,20 +32,59 @@
 
   <body>
     <header>
+      <!-- Mobile Navigation Menu -->
+
+      <div class="mobile-container">
+        <div class="content-wrapper-mobile-nav">
+          <!-- Top Navigation Menu -->
+          <div class="topnav">
+            <a href="index.html" class="active"
+              ><img
+                src="img/la-rentree-des-reseauteurs-logo.png"
+                alt="la-rentree-des-reseauteurs-logo"
+              />
+            </a>
+            <div id="myLinks">
+              <a href="a-propos-de-nous/index.html" rel="noopener"
+                >À propose</a
+              >
+              <a href="nous-evenement/index.html" rel="noopener"
+                >Nous evenement</a
+              >
+              <a href="reseaux-presents/index.html" rel="noopener"
+                >Réseaux presents</a
+              >
+              <a href="sponsors/index.html" rel="noopener">sponsors</a>
+              <a href="tombola/index.html" rel="noopener">Tombola</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div class="btn_grp">
+            <a href="mailto:alexis@larentreedesreseauteurs">Reservation</a>
+          </div>
+          <!-- End smartphone / tablet look -->
+        </div>
+      </div>
       <div class="content-wrapper">
         <figure>
-          <a href="#">
+          <a href="index.html">
             <img
               src="img/la-rentree-des-reseauteurs-logo.png"
               alt="la-rentree-des-reseauteurs-logo"
             />
           </a>
         </figure>
-        <div class="header-divider"></div>
         <nav>
           <ul>
             <li>
-              <a href="a-propos-de-nous/index.html" rel="noopener">À propose</a>
+              <a href="a-propos-de-nous/index.html" rel="noopener"
+                >À propose</a
+              >
+            </li>
+            <li>
+              <a href="#" rel="noopener">Nous evenement</a>
             </li>
             <li>
               <a href="reseaux-presents/index.html" rel="noopener"
@@ -53,13 +92,11 @@
               >
             </li>
             <li>
-              <a href="nous-evenement/index.html" rel="noopener"
-                >Nous evenement</a
-              >
+              <a href="sponsors/index.html" rel="noopener">sponsors</a>
             </li>
-            <li><a href="sponsors/index.html" rel="noopener">sponsors</a></li>
-            <li><a href="tombola/index.html" rel="noopener">Tombola</a></li>
-          
+            <li>
+              <a href="organisateurs/index.html" rel="noopener">Tombola</a>
+            </li>
           </ul>
         </nav>
         <div class="btn_grp">
@@ -80,12 +117,10 @@
               alt="2018-la-rentree-des-reseauter-event-image-1"
             />
             <div class="content">
-              <p>design</p>
-              <h2>Slider 01</h2>
+          
+              <h2>La Rentree des reseauteurs</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsum, ex.
+                Avec la Rentrée des Réseauteurs, remettons l’humain au cœur de nos échanges !
               </p>
             </div>
           </div>
@@ -95,12 +130,10 @@
               alt="2018-la-rentree-des-reseauter-event-image-2"
             />
             <div class="content">
-              <p>design</p>
-              <h2>Slider 02</h2>
+          
+              <h2>Plus de 1000 participants </h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsum, ex.
+                Faire de nouveaux contacts, créer des synergies mais ce qui lui tient particulièrement à cœur, c’est de remettre l’humain au centre de nos échanges !
               </p>
             </div>
           </div>
@@ -110,12 +143,10 @@
               alt="2019-la-rentree-des-reseauter-event-image-1"
             />
             <div class="content">
-              <p>design</p>
-              <h2>Slider 03</h2>
+          
+              <h2>Chaque année dans plus de 5 villes </h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsum, ex.
+                Une réunion annuelle incontournable pour tous les réseauteurs à ne surtout pas manquer. 
               </p>
             </div>
           </div>
@@ -125,12 +156,10 @@
               alt="2022-la-rentree-des-reseauter-event-image-1"
             />
             <div class="content">
-              <p>design</p>
-              <h2>Slider 04</h2>
+          
+              <h2>Plus de 40 Réseaux</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsum, ex.
+                Chaque réseau est présenté sur scène en quelques minutes et mets en avant ses spécificités.
               </p>
             </div>
           </div>
@@ -140,12 +169,10 @@
               alt="2022-la-rentree-des-reseauter-event-image-1"
             />
             <div class="content">
-              <p>design</p>
-              <h2>Slider 05</h2>
+          
+              <h2>Avec La Rentrée des Réseauteurs </h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsum, ex.
+                Une réunion annuelle incontournable pour tous les réseauteurs à ne surtout pas manquer.
               </p>
             </div>
           </div>
@@ -156,43 +183,7 @@
           <button id="next">&gt;</button>
         </div>
         <!-- thumbnail -->
-        <div class="thumbnail">
-          <div class="item active">
-            <img
-              src="img/la-rentree-des-reseauteurs-img-1.jpg"
-              alt="2018-la-rentree-des-reseauter-event-image-1"
-            />
-            <div class="content">Name Slider</div>
-          </div>
-          <div class="item">
-            <img
-              src="img/la-rentree-des-reseauteurs-img-2.jpg"
-              alt="2018-la-rentree-des-reseauter-event-image-2"
-            />
-            <div class="content">Name Slider</div>
-          </div>
-          <div class="item">
-            <img
-              src="img/la-rentree-des-reseauteurs-img-3.jpg"
-              alt="2019-la-rentree-des-reseauter-event-image-1"
-            />
-            <div class="content">Name Slider</div>
-          </div>
-          <div class="item">
-            <img
-              src="img/la-rentree-des-reseauteurs-img-4.jpg"
-              alt="2022-la-rentree-des-reseauter-event-image-1"
-            />
-            <div class="content">Name Slider</div>
-          </div>
-          <div class="item">
-            <img
-              src="img/la-rentree-des-reseauteurs-img-5.jpg"
-              alt="2023-la-rentree-des-reseauter-event-image-1"
-            />
-            <div class="content">Name Slider</div>
-          </div>
-        </div>
+        
       </div>
     </main>
     <!-- end of Slide show container -->

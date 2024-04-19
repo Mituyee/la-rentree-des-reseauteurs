@@ -158,21 +158,14 @@ header {
 
 header .content-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   margin: 0;
 }
 
 header figure {
-  width: 20%;
-}
-
-.header-divider {
-  background: #3a3a3a;
   width: 100%;
-  height: 1px;
-  margin: 10px 0 20px 0;
 }
 
 header nav {
@@ -220,6 +213,89 @@ header .btn_grp a:first-child:hover {
   background: #1d3557;
   color: #b3d4fc;
 }
+
+/* ----- Mobile Navigation Menu --------- */
+
+.mobile-container {
+  display: flex;
+  margin: 0;
+  color: white;
+  margin: -15px 0;
+}
+
+header .content-wrapper-mobile-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin: 0;
+}
+
+header .content-wrapper-mobile-nav .btn_grp {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 0.5em;
+}
+header .content-wrapper {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+header .content-wrapper .btn_grp {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+header .content-wrapper .btn_grp a {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.topnav {
+  width: 100%;
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav img {
+  width: 50%;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .active {
+  background-color: #0a092c;
+  color: white;
+}
+
+/* ----- End of Mobile Navigation Menu --------- */
 
 /* -----Footer Styles --------- */
 
@@ -386,7 +462,8 @@ input[type="button"] {
   letter-spacing: 10px;
 }
 .slider .list .item .content h2 {
-  font-size: 100px;
+  font-size: 3em;
+  font-weight: 700;
   margin: 0;
 }
 .slider .list .item.active {
@@ -435,48 +512,10 @@ input[type="button"] {
   background-color: #eee;
   color: black;
 }
-.thumbnail {
-  position: absolute;
-  bottom: 50px;
-  z-index: 11;
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  height: 250px;
-  padding: 0 50px;
-  box-sizing: border-box;
-  overflow: auto;
-  justify-content: center;
-}
-.thumbnail::-webkit-scrollbar {
-  width: 0;
-}
-.thumbnail .item {
-  width: 150px;
-  height: 220px;
-  filter: brightness(0.5);
-  transition: 0.5s;
-  flex-shrink: 0;
-}
-.thumbnail .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.thumbnail .item.active {
-  filter: brightness(1.5);
-}
-.thumbnail .item .content {
-  position: absolute;
-  inset: auto 10px 10px 10px;
-}
+
 @media screen and (max-width: 678px) {
-  .thumbnail {
-    justify-content: start;
-  }
   .slider .list .item .content h2 {
-    font-size: 60px;
+    font-size: 3em;
   }
   .arrows {
     top: 10%;
@@ -494,7 +533,10 @@ input[type="button"] {
 .participer-button .content-wrapper {
   margin: 10px;
 }
-
+header .content-wrapper .btn_grp a {
+  height: 0;
+  width: 0;
+}
 /* -------------------- Aside ---------------------------------------- */
 
 aside {
@@ -799,7 +841,7 @@ aside {
 .tabs-container .tab-content .content p {
   font-size: 1em;
   margin: 0;
-  padding-top: 15px 
+  padding-top: 15px;
 }
 
 .tabs-container .tab-content .content {
@@ -812,6 +854,31 @@ aside {
 .images {
   width: 100%;
   padding: 20px;
+}
+
+.images h4 {
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  border: 2px solid #3e8cf9;
+  font-size: 1.3em;
+  background: #e2e3ed;
+  border-radius: 50%;
+  color: #1d3557;
+  height: 100px;
+  padding-top: 29px;
+  box-shadow: 0 5px 50px -8px rgba(0, 0, 0, 0.3);
+}
+
+.tab-content-container .tab-content .content .images a h4:first-child:hover {
+  background: #1d3557;
+  color: #fff;
+  border: 2px solid #1d3557;
+}
+
+.tab-content-container .tab-content .content .images a h4:last-child:hover {
+  background: #1d3557;
+  color: #b3d4fc;
+  border: 2px solid #b3d4fc;
 }
 
 .tabs-container .tab-content .content img {
@@ -840,29 +907,28 @@ aside {
   background: #555;
 }
 
-
 /* ==========================================================================
  Nous evenement page
    ========================================================================== */
 
-   .tabs-container .tab-content .content {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    width: 100%;
-    color: white;
-   }
+.tabs-container .tab-content .content {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: 100%;
+  color: white;
+}
 
-   .images {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    width: 50%;
-    padding: 20px;
-   }
-   .tabs-container .tab-content .content img {
-    width:100%
-   }
+.images {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 50%;
+  padding: 20px;
+}
+.tabs-container .tab-content .content img {
+  width: 100%;
+}
 
 /* ==========================================================================
    Helper classes
@@ -975,16 +1041,26 @@ Tablet Styles
   }
 
   header .content-wrapper {
+    display: flex;
     width: 100%;
+    height: auto;
   }
 
+  header .content-wrapper .btn_grp {
+    display: flex;
+    height: auto;
+    padding-left: 10px;
+  }
+
+  header .content-wrapper .btn_grp a {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+  }
   header figure {
     display: flex;
     width: 40%;
     margin-bottom: 25px;
-  }
-  .header-divider {
-    display: none;
   }
 
   header nav {
@@ -994,6 +1070,10 @@ Tablet Styles
   header nav ul {
     justify-content: space-between;
     align-items: baseline;
+  }
+
+  .mobile-container {
+    display: none;
   }
 
   /* -----Footer Styles --------- */
@@ -1015,7 +1095,7 @@ Tablet Styles
     width: 12.5em;
     justify-content: space-between;
   }
-  ∏ footer .copyright {
+  footer .copyright {
     width: 100%;
   }
 
@@ -1135,8 +1215,15 @@ Tablet Styles
   .tabs-container .tab-content .content p {
     font-size: 1.5em;
     padding-top: 5px;
-  
-}
+  }
+
+  .images h4 {
+    border: 4px solid #3e8cf9;
+    font-size: 2em;
+    border-radius: 50%;
+    height: 250px;
+    padding-top: 100px;
+  }
 }
 /* ==========================================================================
   Desktop Style
@@ -1234,7 +1321,7 @@ Tablet Styles
   .images {
     width: 30%;
     padding: 10px;
-}
+  }
 
   .reseaux-presents .content-wrapper {
     width: 100%;
@@ -1251,11 +1338,71 @@ Tablet Styles
   .tabs-container .tab-content .content img {
     font-size: 2em;
     margin: 0;
-    padding-top: 15px 
-}
-  
+    padding-top: 15px;
+  }
+
+  .images h4 {
+    border: 4px solid #3e8cf9;
+    font-size: 2em;
+    border-radius: 50%;
+    height: 250px;
+    padding-top: 100px;
+  }
 }
 
+/* ==========================================================================
+   Ajustment for different phone size
+   ========================================================================== */
+@media only screen and (max-width: 240px) {
+  body {
+    width: 240px;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  .content-wrapper {
+    width: 90%;
+  }
+  .features article {
+    width: 100%;
+  }
+
+  footer .content-wrapper {
+    width: 100%;
+  }
+
+  .tabs-container {
+    height: auto;
+  }
+
+  .tabs-container .tab-heading {
+    padding: 5px;
+  }
+
+  .images {
+    width: 100%;
+  }
+
+  header .content-wrapper {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  header .content-wrapper .btn_grp {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  header .content-wrapper .btn_grp a {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+}
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
