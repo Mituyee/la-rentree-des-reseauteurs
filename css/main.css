@@ -644,7 +644,7 @@ aside {
   margin: 0;
 }
 
-/* ============================ Organisateurs Section ========================== */
+/* ============================ General responsive cell blocks first made for  organisateurs page  and adupted as a base for several pages ========================== */
 .organisateurs {
   background: url("../img/background-pic-organisateurs.jpg") center no-repeat
     #0a092c;
@@ -909,6 +909,28 @@ aside {
   background: #555;
 }
 
+/* ======================= Reseaux, sponsor, tombola,etc sub tabs ============== */
+.sub-tabs {
+  background: #0a092c;
+}
+.sub-tabs .content-wrapper {
+  margin: 0;
+  background: #0a092c;
+  padding-top: 20px;
+}
+.sub-tabs .content-wrapper a {
+  text-decoration: underline;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.sub-tabs .content-wrapper a:first-child:hover {
+  color:#1b549b;
+  
+}
+
+
+
 /* ==========================================================================
  Nous evenement page
    ========================================================================== */
@@ -1167,6 +1189,7 @@ Tablet Styles
   .responsive-container-block {
     width: 100%;
     padding: 0;
+    margin-top: 50px;
   }
   .propose .content-wrapper {
     margin: 100px 0;
@@ -1355,10 +1378,8 @@ Tablet Styles
 /* ==========================================================================
    Ajustment for different phone size
    ========================================================================== */
-@media only screen and (max-width: 240px) {
-  body {
-    width: 240px;
-  }
+@media only screen and (max-width: 440px) {
+
 
   h2 {
     font-size: 1em;
@@ -1404,6 +1425,13 @@ Tablet Styles
     height: 0;
     width: 0;
   }
+
+  .sub-tabs .content-wrapper a {
+    text-decoration: underline;
+    padding: 10px;
+    font-size: 0.5em;
+  }
+  
 }
 /* ==========================================================================
    Print styles.
