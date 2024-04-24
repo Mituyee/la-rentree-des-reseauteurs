@@ -979,14 +979,38 @@ aside {
 
 /* Style for the gallery */
 
+.youtube-video {
+  margin: 0;
+  background: #0a092c;
+}
+
+.youtube-video .embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.youtube-video .embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .gallery {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   background-color: #0a092c;
+  padding: 20px 0;
 }
 
-.gallery h2{
+.youtube-video h2 {
+  text-align: center;
   margin: 0;
   padding: 20px 0;
 }
@@ -995,7 +1019,7 @@ aside {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  margin:0;
+  margin: 0;
   padding: 10px 0;
 }
 
@@ -1043,6 +1067,28 @@ aside {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Style for the previous and next buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
 
 /* ==========================================================================
@@ -1340,6 +1386,14 @@ Tablet Styles
     height: 250px;
     padding-top: 100px;
   }
+
+  /* ==========================================================================
+   À PROPOSE Page
+   ========================================================================== */
+  .youtube-video .embed-container {
+    position: relative;
+    padding-bottom: 35%;
+  }
 }
 /* ==========================================================================
   Desktop Style
@@ -1535,9 +1589,13 @@ Tablet Styles
     font-size: 0.5em;
   }
 
-  .gallery h2{
+  .gallery img {
+    width:100%;
+  }
+
+  .youtube-video h2 {
     font-size: 1em;
-    
+    text-align: center;
   }
 }
 /* ==========================================================================

@@ -94,3 +94,47 @@ function closeModal() {
   var modal = document.getElementById("myModal");
   modal.style.display = "none";
 }
+
+function prevImage() {
+  var currentImage = document.getElementById("modalImg").src;
+  var images = document.querySelectorAll(".gallery-img");
+  var currentIndex;
+  for (var i = 0; i < images.length; i++) {
+    if (images[i].src === currentImage) {
+      currentIndex = i;
+      break;
+    }
+  }
+  var prevIndex = (currentIndex - 1 + images.length) % images.length;
+  if (images[prevIndex]) {
+    openModal(images[prevIndex].src);
+  } else {
+    console.error("Previous image not found.");
+  }
+}
+
+// Navigate to the next image
+function nextImage() {
+  var currentImage = document.getElementById("modalImg").src;
+  var images = document.querySelectorAll(".gallery-img");
+  var currentIndex;
+  for (var i = 0; i < images.length; i++) {
+    if (images[i].src === currentImage) {
+      currentIndex = i;
+      break;
+    }
+  }
+  var nextIndex = (currentIndex + 1) % images.length;
+  if (images[nextIndex]) {
+    openModal(images[nextIndex].src);
+  }
+}
+
+// Listen for left and right arrow key press
+document.addEventListener("keydown", function (event) {
+  if (event.key === "ArrowLeft") {
+    prevImage();
+  } else if (event.key === "ArrowRight") {
+    nextImage();
+  }
+});
