@@ -1429,7 +1429,11 @@ Tablet Styles
   header nav {
     width: 65%;
   }
-  /* ----------- Hero ----------- */
+  /* ----------- Slider ----------- */
+
+  .slider {
+    height: 90vh;
+  }
 
   /*----------- Aside ---------- */
 
@@ -1590,7 +1594,7 @@ Tablet Styles
   }
 
   .gallery img {
-    width:100%;
+    width: 100%;
   }
 
   .youtube-video h2 {
