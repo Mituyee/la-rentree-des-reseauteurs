@@ -131,10 +131,21 @@ function nextImage() {
 }
 
 // Listen for left and right arrow key press
-document.addEventListener("keydown", function (event) {
-  if (event.key === "ArrowLeft") {
-    prevImage();
-  } else if (event.key === "ArrowRight") {
-    nextImage();
+document.addEventListener("DOMContentLoaded", function () {
+  const cookiesModal = document.getElementById("cookies-modal");
+  const acceptCookiesBtn = document.getElementById("accept-cookies-btn");
+
+  acceptCookiesBtn.addEventListener("click", function () {
+    cookiesModal.style.display = "none";
+    // Set a cookie to remember that the user has accepted the cookies notice
+    document.cookie =
+      "cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+  });
+
+  // Check if the user has previously accepted the cookies notice
+  if (!document.cookie.includes("cookiesAccepted=true")) {
+    cookiesModal.style.display = "block";
   }
 });
+
+// End of cookie notice

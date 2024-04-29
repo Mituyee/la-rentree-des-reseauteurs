@@ -145,6 +145,41 @@ address {
   margin: 50px 0;
 }
 
+/* -------------------- Cookies notice styles -------------------- */
+
+.cookies-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  color: #202023;
+}
+
+.cookies-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#accept-cookies-btn {
+  background-color: #333;
+  color: #b3d4fc;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
 /* -------------------- Base Header - Footer Styles -------------------- */
 
 /* -----Header Styles --------- */
@@ -245,9 +280,9 @@ header .content-wrapper-mobile-nav {
 
 header .content-wrapper-mobile-nav .btn_grp {
   width: 100%;
-  margin: 10px 0;
+  margin: 15px 0;
   text-align: center;
-  font-size: 0.5em;
+  font-size: 1em;
 }
 header .content-wrapper {
   display: none;
@@ -572,6 +607,7 @@ aside {
 
 .features h2 {
   margin-bottom: 60px;
+  text-align: center;
 }
 
 .features .features-items {
@@ -1330,9 +1366,10 @@ Tablet Styles
   }
 
   header .content-wrapper .btn_grp {
-    display: none;
-    height: auto;
-    padding-left: 10px;
+    display: flex;
+    width: 100px;
+    padding: 15px 0;
+    justify-content: center;
   }
 
   header .content-wrapper .btn_grp a {
@@ -1362,7 +1399,7 @@ Tablet Styles
   /* -----Footer Styles --------- */
 
   footer .content-wrapper {
-    width: 65%;
+    width: 85%;
   }
   .footer-contact {
     display: flex;
@@ -1375,7 +1412,6 @@ Tablet Styles
   }
 
   footer .social-icons {
-    width: 12.5em;
     justify-content: space-between;
   }
   footer .copyright {
@@ -1418,6 +1454,7 @@ Tablet Styles
 
   .features h2 {
     margin-bottom: 20px;
+    width: 100%;
   }
 
   .features p {
@@ -1572,6 +1609,14 @@ Tablet Styles
   header nav {
     width: 65%;
   }
+
+  header .content-wrapper .btn_grp {
+    display: flex;
+    width: 30px;
+    padding-left: 25px;
+    justify-content: flex-end;
+    align-items: center;
+  }
   /* ----------- Slider ----------- */
 
   .slider {
@@ -1601,7 +1646,7 @@ Tablet Styles
 
   /*------------ Features --------- */
   .features h2 {
-    width: 90%;
+    width: 100%;
   }
 
   .features article {
