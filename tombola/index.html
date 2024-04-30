@@ -22,6 +22,8 @@
       src="https://kit.fontawesome.com/c871d71404.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,700Poppins:500,700"
@@ -520,12 +522,16 @@
       </section>
     </main>
     <!-- end of tombola section -->
-
     <div class="contact-page-cover">
       <div class="content-wrapper">
         <div class="subscription-form">
           <h2>Subscribe</h2>
-          <form id="subscription-form">
+          <form
+            id="subscription-form"
+            action="submit.php"
+            method="post"
+            onsubmit="return onSubmit()"
+          >
             <label for="name">Nom:*</label>
             <input type="name" id="name" name="name" required />
             <label for="name">Prénom:*</label>
@@ -550,7 +556,10 @@
               Entrez le texte ici...
                 </textarea
             >
-
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LeJD8wpAAAAAOsBocdn6CrhAF34BxsJKexf83zL"
+            ></div>
             <button type="submit">S'inscrire</button>
           </form>
         </div>

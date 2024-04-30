@@ -135,6 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const cookiesModal = document.getElementById("cookies-modal");
   const acceptCookiesBtn = document.getElementById("accept-cookies-btn");
 
+  //End of gallary pages
+
+  //Cookie notice
+
   acceptCookiesBtn.addEventListener("click", function () {
     cookiesModal.style.display = "none";
     // Set a cookie to remember that the user has accepted the cookies notice
@@ -149,3 +153,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // End of cookie notice
+
+//Google reCaptcha
+
+function onSubmit(token) {
+  var response = grecaptcha.getResponse();
+  if (response.length == 0) {
+    // reCAPTCHA not verified, handle accordingly
+    alert("Please verify that you are not a robot.");
+    return false;
+  } else {
+    // reCAPTCHA verified, proceed with form submission
+    document.getElementById("subscription-form").submit();
+    return true;
+  }
+}
+
+//End of google reCaptcha
+
+// Form submission form
+
+// Function to handle form submission
+function submitForm() {
+  // Get the value of the email input field
+  var email = document.getElementById("emailInput").value;
+
+  // Perform any validation if needed
+  if (!isValidEmail(email)) {
+    alert("Veuillez entrer une adresse e-mail valide.");
+    return;
+  }
+
+  // You can perform additional actions here, such as sending the form data to a server
+  // For now, let's just log the email to the console
+  console.log("Email submitted:", email);
+
+  // Optionally, you can reset the form fields after submission
+  document.getElementById("emailInput").value = "";
+}
+
+// Function to validate email format
+function isValidEmail(email) {
+  // A basic email validation using a regular expression
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Add event listener to the Participer button
+document.getElementById("submitButton").addEventListener("click", function () {
+  submitForm();
+});
+
+// End of form submission form
