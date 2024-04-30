@@ -164,20 +164,26 @@ address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #0a092c;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 25px;
   text-align: center;
+  color: #b3d4fc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #accept-cookies-btn {
-  background-color: #333;
-  color: #b3d4fc;
+  background-color: #b3d4fc;
+  color: #0a092c;
   border: none;
+  border-radius: 25px;
   padding: 10px 20px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.propose .content-wrapper .cookie-content ul li {
+  list-style-type: disc;
 }
 
 /* -------------------- Base Header - Footer Styles -------------------- */
@@ -430,6 +436,11 @@ input[type="button"] {
   color: #e2e3ed;
   text-align: center;
   text-transform: uppercase;
+}
+
+textarea {
+  resize: vertical;
+  width: 90%;
 }
 
 /* -------------------- Mobile Styles - Homepage -------------------- */
@@ -1208,7 +1219,7 @@ contact page
 
 .subscription-form {
   background: rgba(0, 0, 0, 0.8);
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -1224,7 +1235,7 @@ contact page
   margin-bottom: 10px;
 }
 
-.subscription-form input[type="email"],
+.subscription-form input,
 .subscription-form select {
   width: 90%;
   padding: 10px;
@@ -1506,13 +1517,12 @@ Tablet Styles
 
   .propose-content {
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
     align-items: flex-start;
-    padding-top: 20px;
   }
 
   .propose-content p {
-    width: 45%;
+    width: 80%;
   }
 
   .section-head-text h2 {
