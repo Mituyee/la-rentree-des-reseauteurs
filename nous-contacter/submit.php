@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['freeform'] ?? 'Non spécifié';  // Idem pour message
 
     // Spécifier à qui envoyer le message
-    $to = 'lionel@alloa.ch, l.favero@xefi.ch'; 
+    $to = 'lionel@alloa.ch, alexis@larentreedesreseauteurs.ch'; 
 
     // Créer le sujet du message
     $subject = 'Nouveau message de votre site internet';
@@ -19,8 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "Message: $message";
 
     // Définir les en-têtes
-    $headers = 'From: webmaster@example.com' . "\r\n" .
-               'Reply-To: webmaster@example.com' . "\r\n" .
+    $headers = 'From: webmaster@larentreedesreseauteurs.ch' . "\r\n" .
+               'Reply-To: webmaster@larentreedesreseauteurs.ch' . "\r\n" .
                'MIME-Version: 1.0' . "\r\n" .
                'Content-type: text/plain; charset=UTF-8' . "\r\n" .
                'X-Mailer: PHP/' . phpversion();
