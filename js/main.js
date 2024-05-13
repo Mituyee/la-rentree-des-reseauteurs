@@ -190,6 +190,9 @@ function submitForm() {
 
   // Optionally, you can reset the form fields after submission
   document.getElementById("emailInput").value = "";
+
+  // Redirect the user to the previous page
+  window.history.back();
 }
 
 // Function to validate email format
