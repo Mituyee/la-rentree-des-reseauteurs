@@ -1876,3 +1876,30 @@ Tablet Styles
     page-break-after: avoid;
   }
 }
+
+/* ==========================================================================
+   bullets styles 
+   ========================================================================== */
+
+
+.white-bullets {
+  list-style: none;       /* remove default bullet */
+  padding-left: 0;
+}
+
+.white-bullets li {
+  position: relative;
+  padding-left: 30px;     /* space for bullet */
+  margin-bottom: 10px;
+  color: #fff;            /* text color (if needed) */
+}
+
+.white-bullets li::before {
+  content: "●";           /* solid circle */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 22px;        /* bullet size */
+  color: #ffffff;         /* bullet color = white */
+  line-height: 1;
+}
