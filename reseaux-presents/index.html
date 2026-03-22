@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8" />
@@ -66,6 +66,7 @@
               >
               <a href="../sponsors/index.html" rel="noopener">Sponsors</a>
               <a href="../tombola/index.html" rel="noopener">Tombola</a>
+<a href=“../devenez-franchise-lrdr/index.html" rel="noopener">Franchisé</a>
               <a href="../nous-contacter/index.html" rel="noopener">Contact</a>
             </div>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -110,6 +111,9 @@
             <li>
               <a href="../tombola/index.html" rel="noopener">Tombola</a>
             </li>
+<li>
+              <a href="../devenez-franchise-lrdr/index.html " rel="noopener">Franchisé</a>
+            </li>
             <li>
               <a href="../nous-contacter/index.html" rel="noopener">Contact</a>
             </li>
@@ -120,7 +124,6 @@
         </div>
       </div>
     </header>
-
     <main class="reseaux-presents-cover">
       <section class="reseaux-presents">
         <div class="content-wrapper">
@@ -373,8 +376,6 @@
             <div class="tab-content-container">
               <div class="tab-content">
                 <div class="content">
-                  
-
                   <div class="images">
                     <a href="../reseaux-presents-2025-geneve/index.html"
                       ><h4>Genève</h4>
@@ -387,8 +388,6 @@
                     </a>
                   </div>
 
-                 
-
                   <div class="images">
                     <a href="../reseaux-presents-2025-neuchatel/index.html"
                       ><h4>Neuchâtel</h4>
@@ -398,7 +397,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -408,42 +406,56 @@
     <div class="contact-page-cover">
       <div class="content-wrapper">
         <div class="subscription-form">
-          <h2>Subscribe</h2>
+          <h2>Contactez-nous</h2>
+
           <form
             id="subscription-form"
             action="submit.php"
             method="post"
-            onsubmit="return onSubmit()"
+            onsubmit="return onSubmit();"
           >
-            <label for="name">Nom:*</label>
-            <input type="name" id="name" name="name" required />
-            <label for="name">Prénom:*</label>
-            <input type="name" id="name" name="name" required />
-            <label for="tel"> Téléphone:*</label>
+            <label for="nom">Nom:*</label>
+            <input type="text" id="nom" name="nom" required />
+
+            <label for="prenom">Prénom:*</label>
+            <input type="text" id="prenom" name="prenom" required />
+
+            <label for="tel">Téléphone:*</label>
             <input type="tel" id="tel" name="tel" required />
+
             <label for="email">E-mail:*</label>
             <input type="email" id="email" name="email" required />
+
             <label for="subscription-option">Vous êtes intéressé(e) par</label>
-            <select id="subscription-option" name="subscription-option">
-              <option value="option1">Les actualités</option>
-              <option value="option2">Les communiqués de presse</option>
-              <option value="option3">
-                Devenir sponsors ou donner un lot de tombola
+            <select id="subscription-option" name="subscription_option">
+              <option value="Les actualités">Les actualités</option>
+              <option value="Les communiqués de presse">
+                Les communiqués de presse
               </option>
-              <option value="option3">Participer avec votre réseau</option>
-              <option value="option3">Autre</option>
+              <option value="Devenir sponsor ou donner un lot de tombola">
+                Devenir sponsor ou donner un lot de tombola
+              </option>
+              <option value="Participer avec votre réseau">
+                Participer avec votre réseau
+              </option>
+              <option value="Autre">Autre</option>
             </select>
-            <label for="subscription-option">Message</label>
-            <br />
-            <textarea id="freeform" name="freeform" rows="4" cols="50">
-              Entrez le texte ici...
-                </textarea
-            >
+
+            <label for="freeform">Message</label>
+            <textarea
+              id="freeform"
+              name="message"
+              rows="4"
+              cols="50"
+              placeholder="Entrez votre message ici..."
+            ></textarea>
+
             <div
               class="g-recaptcha"
               data-sitekey="6Ld4wdopAAAAAFjNCMQeIskEolX01Df8e1w457uM"
             ></div>
-            <button type="submit">S'inscrire</button>
+
+            <button type="submit">Contactez-nous</button>
           </form>
         </div>
       </div>
