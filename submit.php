@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $to = "beti@swissadvert.com";
+    $to = "info@larentreedesreseauteurs.ch";
     $subject = "Nouvelle participation";
     $message = "Nouvel inscrit : " . $email;
 

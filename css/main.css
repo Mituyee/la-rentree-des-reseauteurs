@@ -356,7 +356,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: left;
   background: #202023;
 }
 footer .content-wrapper {
@@ -1598,7 +1598,7 @@ Tablet Styles
   .footer-contact {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
   }
 
   footer .contact {
@@ -1777,7 +1777,7 @@ Tablet Styles
 
   /* ----General Style------*/
   .content-wrapper {
-    max-width: 960px;
+    max-width: 1200px;
   }
 
   p {
