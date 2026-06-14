@@ -2140,3 +2140,43 @@ Tablet Styles
     font-size: 1rem;
   }
 }
+/* ===========================
+   VIDEO SECTION
+=========================== */
+.video-section {
+  background: #000;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.video-section .content-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-section h2,
+.video-section p {
+  color: #fff;
+}
+
+.video-section h2 {
+  margin-bottom: 15px;
+}
+
+.video-section p {
+  margin-bottom: 40px;
+}
+
+.video-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
