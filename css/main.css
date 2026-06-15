@@ -2146,23 +2146,12 @@ Tablet Styles
 .video-section {
   background: #000;
   padding: 80px 0;
-  width: 100%;
-}
-
-.video-section .content-wrapper {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  text-align: center;
 }
 
 .video-section h2,
 .video-section p {
   color: #fff;
-}
-
-.video-section h2 {
-  margin-bottom: 15px;
+  text-align: center;
 }
 
 .video-section p {
@@ -2170,13 +2159,19 @@ Tablet Styles
 }
 
 .video-container {
+  position: relative;
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 56.25%;
+  height: 0;
 }
 
-.video-container video {
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0;
+  height: 100%;
+  border: 0;
 }
