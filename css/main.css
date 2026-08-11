@@ -2217,3 +2217,219 @@ Tablet Styles
     border-radius: 10px;
   }
 }
+
+
+/* ==========================================================================
+   FRANCHISE PAGE — 2026 layout correction
+   Keeps the page in one clear vertical flow and prevents headings/lists
+   from sitting side-by-side because of the old .propose-content flex rules.
+   ========================================================================== */
+
+.franchise-page .propose {
+  padding: 0;
+}
+
+.franchise-page .propose > .content-wrapper {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 0 80px;
+}
+
+.franchise-page .franchise-intro h1 {
+  margin: 0 0 48px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.45rem);
+  line-height: 1.18;
+  font-weight: 700;
+  color: #e2e3ed;
+}
+
+.franchise-page .franchise-intro h1 span {
+  display: block;
+  margin-top: 8px;
+}
+
+.franchise-page .propose-content.franchise-content {
+  display: block;
+  width: 100%;
+}
+
+.franchise-page .propose-content.franchise-content > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.franchise-page .franchise-lead {
+  max-width: 950px;
+  margin: 0 0 52px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.franchise-page .franchise-block {
+  max-width: 950px;
+  margin: 0 0 48px;
+}
+
+.franchise-page .franchise-block h2 {
+  width: 100%;
+  margin: 0 0 18px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.45rem, 2.3vw, 2rem);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.franchise-page .franchise-block p {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 20px;
+  line-height: 1.7;
+}
+
+.franchise-page .franchise-block .white-bullets {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.franchise-page .franchise-block .white-bullets li {
+  position: relative;
+  margin: 0 0 12px;
+  padding-left: 24px;
+  line-height: 1.65;
+}
+
+.franchise-page .franchise-block .white-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  font-size: 1.25em;
+}
+
+.franchise-page .franchise-audience {
+  padding: 30px 34px;
+  border: 1px solid rgba(179, 212, 252, 0.28);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.franchise-page .franchise-cta {
+  margin-bottom: 0;
+}
+
+.franchise-page .franchise-contact-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 24px;
+  border: 1px solid #b3d4fc;
+  border-radius: 999px;
+  color: #e2e3ed;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.franchise-page .franchise-contact-button:hover {
+  background: #b3d4fc;
+  color: #0a092c;
+}
+
+/* Contact block */
+.franchise-page .franchise-contact-section {
+  padding: 75px 0;
+  background: #333;
+}
+
+.franchise-page .franchise-contact-section > .content-wrapper {
+  width: 90%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.franchise-page .franchise-contact-section .subscription-form {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 34px;
+  box-sizing: border-box;
+}
+
+.franchise-page .franchise-contact-section .subscription-form h2 {
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.franchise-page .franchise-contact-section .form-intro {
+  margin: 0 auto 30px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.franchise-page .franchise-contact-section .subscription-form input,
+.franchise-page .franchise-contact-section .subscription-form select,
+.franchise-page .franchise-contact-section .subscription-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.franchise-page .franchise-contact-section .subscription-form textarea {
+  resize: vertical;
+}
+
+.franchise-page .franchise-contact-section .g-recaptcha {
+  margin: 5px 0 22px;
+}
+
+.franchise-page .franchise-contact-section .subscription-form button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Override the old desktop flex layout that caused
+   "Modèle flexible", "Rejoindre LRDR" and "Pour qui ?" to overlap. */
+@media only screen and (min-width: 768px) {
+  .franchise-page .propose-content.franchise-content {
+    display: block;
+  }
+
+  .franchise-page .propose-content.franchise-content p {
+    width: 100%;
+  }
+
+  .franchise-page .propose > .content-wrapper {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .franchise-page .propose > .content-wrapper {
+    width: 88%;
+    padding: 60px 0;
+  }
+
+  .franchise-page .franchise-intro h1 {
+    margin-bottom: 35px;
+  }
+
+  .franchise-page .franchise-block {
+    margin-bottom: 38px;
+  }
+
+  .franchise-page .franchise-audience {
+    padding: 24px 20px;
+  }
+
+  .franchise-page .franchise-contact-section {
+    padding: 55px 0;
+  }
+
+  .franchise-page .franchise-contact-section .subscription-form {
+    padding: 24px 18px;
+  }
+}

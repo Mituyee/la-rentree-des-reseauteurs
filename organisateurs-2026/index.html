@@ -13,101 +13,46 @@
 
     <link rel="manifest" href="../site.webmanifest" />
     <link rel="apple-touch-icon" href="../icon.png" />
-    <!-- Place favicon.ico in the root directory -->
+    <meta name="theme-color" content="#fafafa" />
 
-    <link rel="stylesheet" href="../css/normalize.css" />
-    <link rel="stylesheet" href="../css/main.css?v=5" />
+    <link rel="stylesheet" href="../css/normalize.css?v=3" />
+    <link rel="stylesheet" href="../css/main.css?v=4" />
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <script
       src="https://kit.fontawesome.com/c871d71404.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Google Fonts -->
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700Poppins:500,700"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@500;700&family=Paytone+One&display=swap"
       rel="stylesheet"
     />
-
-    <meta name="theme-color" content="#fafafa" />
   
     <style>
-      /* Contact page alignment fixes */
-      .contact-page .contact-section .contact-section-cover .content-wrapper,
-      .contact-page .contact-page-cover > .content-wrapper {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        text-align: center !important;
-      }
-
-      .contact-intro-questions {
-        max-width: 980px;
-        margin: 0 auto !important;
-        text-align: center !important;
-        line-height: 1.8;
-      }
-
-      .contact-form-heading {
-        width: 100%;
-        margin: 0 auto 30px;
-        text-align: center !important;
-      }
-
-      .contact-form-heading h2 {
+      /* 2026 organisers layout:
+         Row 1 Alexis / Row 2 Odia + Beti / Row 3 Hugues */
+      .organisateurs .team-row--two {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(220px, 280px)) !important;
+        justify-content: center !important;
+        align-items: start !important;
+        column-gap: 55px !important;
+        row-gap: 45px !important;
         width: 100% !important;
-        margin: 0 auto 8px !important;
-        text-align: center !important;
-      }
-
-      .contact-form-heading p {
-        margin: 0 auto !important;
-        text-align: center !important;
-        font-family: "Poppins", sans-serif;
-        font-size: 1.15rem;
-        font-weight: 500;
-      }
-
-      .contact-page .subscription-form {
         margin-left: auto !important;
         margin-right: auto !important;
       }
 
-      .contact-information-title {
-        width: 100% !important;
-        margin: 0 auto 24px !important;
-        text-align: center !important;
-      }
-
-      .contact-details {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        text-align: center !important;
-      }
-
-      .contact-details address,
-      .contact-details p {
-        text-align: center !important;
-      }
-
-      @media only screen and (max-width: 767px) {
-        .contact-intro-questions {
-          line-height: 1.7;
-        }
-
-        .contact-form-heading h2 {
-          font-size: 1.45rem;
-        }
-
-        .contact-form-heading p {
-          font-size: 1rem;
+      @media only screen and (max-width: 620px) {
+        .organisateurs .team-row--two {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          gap: 45px !important;
         }
       }
     </style>
@@ -202,125 +147,132 @@
         </div>
       </div>
     </header>
-    <main class="contact-page">
-      <section class="contact-section contact-intro">
-        <div class="contact-section-cover">
-          <div class="content-wrapper">
-            <h2>
-              La Rentrée des Réseauteurs<br />
-              La plus grande soirée de réseautage inter-clubs à Genève et en Suisse romande
-            </h2>
-            <p class="contact-intro-questions">
-              Vous souhaitez participer à la prochaine édition de La Rentrée des Réseauteurs à Genève, Lausanne, Neuchâtel, Lyon, Annecy ou Metz ?<br />
-              Vous représentez un club d’affaires et souhaitez rejoindre le réseau des réseaux ?<br />
-              Vous êtes entrepreneur, dirigeant PME ou indépendant et vous recherchez un événement de réseautage structuré dans votre ville ?<br />
-              Notre équipe vous répond dans les meilleurs délais.
-            </p>
-          </div>
-        </div>
-      </section>
+    <!-- organisateurs section -->
+    <section class="sub-tabs">
+      <div class="content-wrapper">
+        <p>ORGANISATEURS</p>
+        <a href="../organisateurs-2018/index.html" rel="noopener"> 2018 </a>
+        <a href="../organisateurs-2019/index.html" rel="noopener"> 2019 </a>
+        <a href="../organisateurs-2022/index.html" rel="noopener">2022 </a>
+        <a href="../organisateurs-2023/index.html" rel="noopener">2023 </a>
+        <a href="../organisateurs-2024/index.html" rel="noopener">2024 </a>
+        <a
+          href="../organisateurs-2025/index.html"
+          class="active"
+          aria-current="page"
+          rel="noopener"
+          >2025</a
+        >
+        <a href="../organisateurs-2026/index.html" rel="noopener">2026</a>
+      </div>
+    </section>
 
-      <section class="contact-page-cover">
+    <section class="organisateurs">
+      <section class="organisateurs-cover">
         <div class="content-wrapper">
-          <h3>Organisation &amp; informations générales</h3>
-          <p>Pour toute question concernant :</p>
+          <div class="responsive-container-block outer-container">
+            <div class="responsive-container-block inner-container">
+              <h2 class="text-blk section-head-text">Organisateurs – 2026</h2>
 
-          <ul class="contact-list">
-            <li>Les dates des prochaines éditions</li>
-            <li>Les modalités d’inscription et les partenariats</li>
-            <li>Les opportunités de sponsoring</li>
-            <li>La participation en tant qu’exposant</li>
-          </ul>
+              <div class="team-row team-row--lead">
+                <div class="responsive-cell-block team-card-container">
+                  <div class="team-card">
+                    <div class="img-wrapper">
+                      <img
+                        class="team-img"
+                        src="../img/alexis-jacques.jpg"
+                        alt="Alexis Jacques"
+                      />
+                    </div>
+                    <p class="text-blk name">Alexis Jacques</p>
+                    <p class="text-blk position">
+                      Président, fondateur et responsable organisation
+                    </p>
+                    <div class="btn_grp">
+                      <a href="mailto:alexis@larentreedesreseauteurs.ch"
+                        >Contact</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-          <div class="subscription-form">
-            <div class="contact-form-heading">
-              <h2>Besoin d’informations ou envie de nous dire bonjour ?</h2>
-              <p>Contactez-nous 😊</p>
+              <div class="team-row team-row--two">
+                <div class="responsive-cell-block team-card-container">
+                  <div class="team-card">
+                    <div class="img-wrapper">
+                      <img
+                        class="team-img"
+                        src="../img/odia-iswala.jpg"
+                        alt="Odia Iswala"
+                      />
+                    </div>
+                    <p class="text-blk name">Odia Iswala</p>
+                    <p class="text-blk position">
+                      Responsable Lausanne<br />et co-responsable développement
+                    </p>
+                    <div class="btn_grp">
+                      <a href="mailto:odia@larentreedesreseauteurs.ch"
+                        >Contact</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="responsive-cell-block team-card-container">
+                  <div class="team-card">
+                    <div class="img-wrapper">
+                      <img
+                        class="team-img"
+                        src="../img/beti-messele.jpg"
+                        alt="Beti Messele"
+                      />
+                    </div>
+                    <p class="text-blk name">Beti Messele</p>
+                    <p class="text-blk position">
+                      Co-organisatrice, directrice créative et co-responsable
+                      développement
+                    </p>
+                    <div class="btn_grp">
+                      <a href="mailto:beti@larentreedesreseauteurs.ch"
+                        >Contact</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="team-row">
+                <div class="responsive-cell-block team-card-container">
+                  <div class="team-card">
+                    <div class="img-wrapper">
+                      <img
+                        class="team-img"
+                        src="../img/hugues-steyner.jpg"
+                        alt="Hugues Steyner"
+                      />
+                    </div>
+                    <p class="text-blk name">Hugues Steyner</p>
+                    <p class="text-blk position">
+                      Ambassadeur,
+                      <a
+                        href="https://bni.swiss/fr-CH/index"
+                        target="_blank"
+                        rel="noopener"
+                        >BNI SUISSE</a
+                      >
+                    </p>
+                    <div class="btn_grp">
+                      <a href="mailto:hugues.steyner@bni.swiss">Contact</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <form
-              id="subscription-form"
-              action="../submit.php"
-              method="post"
-              onsubmit="return onSubmit();"
-            >
-              <label for="nom">Nom :*</label>
-              <input type="text" id="nom" name="nom" required />
-
-              <label for="prenom">Prénom :*</label>
-              <input type="text" id="prenom" name="prenom" required />
-
-              <label for="tel">Téléphone :*</label>
-              <input type="tel" id="tel" name="tel" required />
-
-              <label for="email">E-mail :*</label>
-              <input type="email" id="email" name="email" required />
-
-              <label for="subscription-option">Vous êtes intéressé(e) par</label>
-              <select id="subscription-option" name="subscription_option">
-                <option value="Les actualités">Les actualités</option>
-                <option value="Les communiqués de presse">Les communiqués de presse</option>
-                <option value="Devenir sponsor ou donner un lot de tombola">
-                  Devenir sponsor ou donner un lot de tombola
-                </option>
-                <option value="Participer avec votre réseau">Participer avec votre réseau</option>
-                <option value="Autre">Autre</option>
-              </select>
-
-              <label for="freeform">Message</label>
-              <textarea
-                id="freeform"
-                name="message"
-                rows="5"
-                placeholder="Entrez votre message ici..."
-              ></textarea>
-
-              <div
-                class="g-recaptcha"
-                data-sitekey="6Ld4wdopAAAAAFjNCMQeIskEolX01Df8e1w457uM"
-              ></div>
-
-              <button type="submit">Contactez-nous</button>
-            </form>
           </div>
         </div>
       </section>
-
-      <section class="contact-section contact-information">
-        <div class="contact-section-cover">
-          <div class="content-wrapper">
-            <h2 class="contact-information-title">Informations générales</h2>
-
-            <div class="contact-details">
-              <address>
-                <p>
-                  Chemin Bizot 4, 1208 Genève, Suisse<br />
-                  +41 79 734 67 09<br />
-                  info@larentreedesreseauteurs.ch
-                </p>
-              </address>
-            </div>
-
-            <div class="map">
-              <figure>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11044.271187569315!2d6.1086050499999995!3d46.209106299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sch!4v1712674590068!5m2!1sen!2sch"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title="Carte de La Rentrée des Réseauteurs"
-                ></iframe>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <section class="ticket-website"></section>
+    </section>
 
     <footer>
       <div class="content-wrapper">
